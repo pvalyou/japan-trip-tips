@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מדריך יפן - המלצות וטיפים</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #c0392b;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            line-height: 1.8;
+            color: #333;
+            padding-top: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #ff6b6b, #c0392b);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 0;
+        }
+        .search-box {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid var(--primary);
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .section h2 {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-header {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--light);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: background 0.3s;
+        }
+        .section-header:hover {
+            background: var(--secondary);
+        }
+        .section-header i {
+            transition: transform 0.3s;
+        }
+        .section-header.active i {
+            transform: rotate(45deg);
+        }
+        .section-content {
+            overflow: hidden;
+            max-height: 1000px;
+            transition: max-height 0.4s ease;
+        }
+        .section-content.collapsed {
+            max-height: 0;
+        }
+        .city {
+            margin-bottom: 30px;
+        }
+        .city h3 {
+            color: var(--primary);
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .place {
+            background: var(--light);
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 18px;
+            border-left: 4px solid var(--primary);
+            transition: all 0.2s ease;
+        }
+        .place:hover {
+            background: #f0f4ff;
+            transform: translateX(5px);
+        }
+        .place h4 {
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+        .place p {
+            font-size: 0.98em;
+            color: #555;
+            line-height: 1.6;
+        }
+        .place .address {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+        .tip-card {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #ffc107;
+            transition: all 0.3s ease;
+        }
+        .tip-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+        }
+        .tip-card h4 {
+            color: #856404;
+            margin-bottom: 12px;
+        }
+        .food-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .food-item {
+            background: #e8f5e9;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        .food-item:hover {
+            transform: scale(1.03);
+            background: #dcedc8;
+        }
+        .food-item strong {
+            color: #2e7d32;
+        }
+        .stats-section {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px dashed var(--primary);
+            margin-top: 30px;
+        }
+        .stats-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .stats-header h2 {
+            color: var(--primary);
+        }
+        .stats-list {
+            list-style: none;
+            padding: 0;
+        }
+        .stats-list li {
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .stats-list li strong {
+            color: var(--primary);
+        }
+        .nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        .nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            list-style: none;
+            justify-content: center;
+        }
+        .nav a {
+            color: var(--primary);
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            background: #ffeaa7;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+        .nav a:hover {
+            background: #fdcb6e;
+            color: var(--primary);
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .image-gallery img {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .image-gallery img:hover {
+            transform: scale(1.05);
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .tag {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            margin: 2px;
+        }
+        .tag.gf {
+            background: #27ae60;
+        }
+        .tag.warning {
+            background: var(--accent);
+        }
+        .detailed-desc {
+            background: #e6e6e6;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            border-left: 3px solid var(--primary);
+            font-style: italic;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            .nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .section-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .section-header i {
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇯🇵 מדריך יפן - המלצות וטיפים</h1>
+            <p>המלצות, מסעדות, מלונות ואטרקציות מהטיול</p>
+        </header>
+
+        <div class="nav">
+            <ul>
+                <li><a href="#tokyo">טוקיו</a></li>
+                <li><a href="#kyoto">קיוטו</a></li>
+                <li><a href="#osaka">אוסקה</a></li>
+                <li><a href="#hakone">האקונה</a></li>
+                <li><a href="#nara">נארה</a></li>
+                <li><a href="#kanazawa">קנזאווה</a></li>
+                <li><a href="#tips">טיפים כלליים</a></li>
+                <li><a href="#food">אוכל</a></li>
+                <li><a href="#hotels">מלונות</a></li>
+                <li><a href="#photos">תמונות</a></li>
+                <li><a href="#stats">סטטיסטיקה</a></li>
+            </ul>
+        </div>
+
+        <input type="text" class="search-box" placeholder="חיפוש..." oninput="search(this.value)">
+
+        <div class="section" id="tokyo">
+            <h2>
+                <span class="section-header">
+                    <i class="fas fa-plus"></i> טוקיו
+                    <small class="detailed-desc">אזורים מרכזיים: שינג'וקו ושיבויה - שני אזורים קרובים עם אווירה מגוונת. שינג'וקו מציע חיי לילה ותנועה רבה, בעוד שיבויה הוא המרכז האופייני של טוקיו עם רחובות צבעוניות. גינזה הוא אזור אלגנטי עם מסעדות יוקרה. אסקסה ו-וונו הם אזורים שקטים יותר ומרוחקים מהמרכז, אך עם אטרקציות ייחודיות.</small>
+                </span>
+            </h2>
+            
+            <div class="section-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus"></i>
+            </div>
+            
+            <div class="section-content collapsed">
+                <div class="city">
+                    <h3>📍 אזורים מומלצים</h3>
+                    <div class="place">
+                        <h4>שינג'וקו ושיבויה</h4>
+                        <p>קרובות אחת לשנייה, יש לאן ללכת בערב, אזורים שהמלונות יהיו לרוב יחסית שקטים אבל כמה דקות הליכה מאזורים עם הרבה תנועה וכיף</p>
+                        <div class="place">
+                            <h4>גינזה</h4>
+                            <p>צד אחר של העיר, נחשב אזור מרכזי ואהוב עם הרבה דברים לעשות בערב</p>
+                        </div>
+                        <div class="place">
+                            <h4>אסקסה ו-וונו</h4>
+                            <p>אזורים עם אטרקציות אליהם תגיעו, אבל הם אזורים שקטים יותר ורחוקים יותר מה״מרכז״ הקלאסי. לרוב האזורים האלו זולים יותר משלושת האחרים שכתבתי, אבל כאמור. בלי להתייחס למחיר, מי שישן באזורים האלו (כמונו, אגב) הם מי שמעדיפים לא להיות באזורים המאוד מרכזיים בערב. גם בוונו ובאסקסה יש מסעדות, יש איפה להסתובב בערב, אבל משמעותית פחות, זה לא כמו לרדת למטה בשלושת הראשונים ויש מיליון מקומות פתוחים ללכת אליהם, קריוקי, שופינג, ברים, וכ״ו.</p>
+                        </div>
+                        <div class="place">
+                            <h4>איקבוקורו, ה׳צבורי</h4>
+                            <p>אזורים בלי אטרקציות משמעותיות אבל מאוד נגישים לתחבורה ציבורית או לא רחוקים מאוד מהמרכז - אני לא שמה שם אנשים הרבה, אבל אלו אחלה אזורים. ה׳צבורי גם קרובה לתחנת טוקיו וגינזה. לרוב רק מי שלוקח מלוני דירות של מימרו ישנים שם.</p>
+                        </div>
+                    </div>
+                    
+                    <h3>🎢 אטרקציות</h3>
+                    <div class="place">
+                        <h4>טים לאב (TeamLabs Planets)</h4>
+                        <p>מוזיאון מדע וחדשנות מטורף! ממולץ מאוד. מחולק ל-3 חלקים - מים, יער וגינה. חלק המים הוא הכי מגניב - הולכים יחפים במים. חוויה וואו!</p>
+                    </div>
+                    <div class="place">
+                        <h4>מוזיאון אקווריום אמנות (Art Aquarium Museum)</h4>
+                        <p>מוזיאון שמייצר מיצגים באמצעות אקווריומים עם דגי זהב. ממש מרהיבים ביופי!</p>
+                    </div>
+                    <div class="place">
+                        <h4>Tokyo Skytree</h4>
+                        <p>מגדל תצפית מהיפים בטוקיו. כרטיס קומבו - Tombo Deck + Galleria. מומלץ להזמין מראש!</p>
+                    </div>
+                    <div class="place">
+                        <h4>פארק שינג'וקו גויין (Shinjuku Goyen)</h4>
+                        <p>פארק ענק עם נקודות פריחת סאקורה. כניסה בתשלום (אפשר עם Suica)</p>
+                    </div>
+                    <div class="place">
+                        <h4>מקדש מייג'י-ג'ינגו</h4>
+                        <p>מקדש יפהפה בתוך יער עבות. יש אפשרות לראות חתונות יפניות מסורתיות</p>
+                    </div>
+                    <div class="place">
+                        <h4>פארק אואנו</h4>
+                        <p>שדרת סאקורה מדהימה! ריכוז עצום של עצי סאקורה בשיא הפריחה</p>
+                    </div>
+                    <div class="place">
+                        <h4>אקיהברה</h4>
+                        <p>רובע האנימה והאלקטרוניקה. Bic Camera - חנות אלקטרוניקה ענקית</p>
+                    </div>
+                    <div class="place">
+                        <h4>אודאיבה</h4>
+                        <p>פסל יוניקורן גנדם ענק ב-DiverCity. ריינבו ברידג'. בניין Fuji TV</p>
+                    </div>
+                </div>
+
+                <div class="city">
+                    <h3>🛍️ קניות</h3>
+                    <div class="place">
+                        <h4>Cat Street</h4>
+                        <p>רחוב קניות היפסטרי</p>
+                    </div>
+                    <div class="place">
+                        <h4>Omotesando Hills</h4>
+                        <p>קניון וכל הרחובות שמאחוריו</p>
+                    </div>
+                    <div class="place">
+                        <h4>אזור Meguro River</h4>
+                        <p>אזור יפה עם נהר</p>
+                    </div>
+                    <div class="place">
+                        <h4>Daikanyama</h4>
+                        <p>מתחילים מהספרייה וזורמים</p>
+                    </div>
+                    <div class="place">
+                        <h4>LOFT בשיבויה</h4>
+                        <p>החנות המושלמת! כל מה שצריך</p>
+                    </div>
+                    <div class="place">
+                        <h4>Book Off</h4>
+                        <p>ממלכת יד שניה - ספרים, גיימינג, בגדים, אקססוריז</p>
+                    </div>
+                    <div class="place">
+                        <h4>ABC Mart</h4>
+                        <p>לנעליים - לגברים יש דגמים מהממים</p>
+                    </div>
+                    <div class="place">
+                        <h4>חנות דיסני בשינג'וקו</h4>
+                        <p>הכי נהדרת שהיינו</p>
+                    </div>
+                    <div class="place">
+                        <h4>חנות הארי פוטר</h4>
+                        <p>חובה לביקור!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="kyoto">
+            <h2>
+                <span class="section-header">
+                    <i class="fas fa-plus"></i> קיוטו
+                    <small class="detailed-desc">עיר היסטורית ויפהיפיה עם תרבות יפנית עמוקה. מתאימה לטיול עם ילדים ומציעה אטרקציות תרבותיות, גנות מרהיבות, ופינות שקטות.</small>
+                </span>
+            </h2>
+            
+            <div class="section-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus"></i>
+            </div>
+            
+            <div class="section-content collapsed">
+                <div class="city">
+                    <h3>🎯 אל תפספסו</h3>
+                    <div class="place">
+                        <h4>Okochi Sanso Garden</h4>
+                        <p>בעונת השלכת - חובה! אחד היפים שראיתי, עם עצים יפים ונוף מרהיב</p>
+                    </div>
+                    <div class="place">
+                        <h4>סמטאות פונטוקו (Pontocho)</h4>
+                        <p>הקסם האמיתי - פשוט ללכת לאיבוד בסמטאות, אווירה מיוחדת</p>
+                    </div>
+                    <div class="place">
+                        <h4>America-mura</h4>
+                        <p>שכונת ההיפסטרים - אופנה ותרבות צעירה</p>
+                    </div>
+                    <div class="place">
+                        <h4>GOOD morning RECORD BAR</h4>
+                        <p>בר רגוע עם אוכל טוב, מומלץ לבוקר</p>
+                    </div>
+                </div>
+
+                <div class="city">
+                    <h3>🎢 אטרקציות</h3>
+                    <div class="place">
+                        <h4>מוזיאון סמוראי</h4>
+                        <p>מומלץ לחובבי היסטוריה, מציג אמנות וציוד סמוראי</p>
+                    </div>
+                    <div class="place">
+                        <h4>יער הבמבוקים (Arashiyama)</h4>
+                        <p>ביער מדהים עם שבילים ייחודיים ותחושה של שלווה</p>
+                    </div>
+                    <div class="place">
+                        <h4>שייט בנהר</h4>
+                        <p>חוויה יפה ונעימה לאורך הנהר</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="osaka">
+            <h2>
+                <span class="section-header">
+                    <i class="fas fa-plus"></i> אוסקה
+                    <small class="detailed-desc">עיר תוססת ומקיימת עם אופי ייחודי. ידועה באוכל heritag, תרבות ייחודית, ושעשועונים.</small>
+                </span>
+            </h2>
+            
+            <div class="section-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus"></i>
+            </div>
+            
+            <div class="section-content collapsed">
+                <div class="city">
+                    <h3>📍 אל תפספסו</h3>
+                    <div class="place">
+                        <h4>America-mura</h4>
+                        <p>שכונת ההיפסטרים - אופנה, קפה, אווירה צעירה</p>
+                    </div>
+                    <div class="place">
+                        <h4>Kuromon Market</h4>
+                        <p>שוק האוכל הכי טעים בעיר - מגוון רחב של מזון</p>
+                    </div>
+                    <div class="place">
+                        <h4>דוב חתול</h4>
+                        <p>אטרקציה מומלצת - דוב פלטפורמה ייחודית</p>
+                    </div>
+                    <div class="place">
+                        <h4>יוניברסל סטודיו</h4>
+                        <p>לרכוש כרטיסים פאסט פס, להימנע בשבת או ראשון!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="hakone">
+            <h2>
+                <span class="section-header">
+                    <i class="fas fa-plus"></i> האקונה
+                    <small class="detailed-desc">אזור הררי מרהיב עם נופים של הר פוג'י, אונסן, ומסלולים טבעיים.</small>
+                </span>
+            </h2>
+            
+            <div class="section-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus"></i>
+            </div>
+            
+            <div class="section-content collapsed">
+                <div class="city">
+                    <h3>🎯 אל תפספסו</h3>
+                    <div class="place">
+                        <h4>Kubota Itchiku Art Museum</h4>
+                        <p>מוזיאון קימונו משוגע - תצוגה של קימונואים יפהפיים</p>
+                    </div>
+                    <div class="place">
+                        <h4>נוף לפוג'י</h4>
+                        <p>אם התמזל מזלכם תראו את הר פוג'י המדהים</p>
+                    </div>
+                    <div class="place">
+                        <h4>The Hakone Open-Air Museum</h4>
+                        <p>מוזיאון פתוח - מתאים מאוד לילדים עם פסלים ותצוגות חוץ</p>
+                    </div>
+                    <div class="place">
+                        <h4>שער הטורי של Hakone Shrine</h4>
+                        <p>תורים ארוכים, אך מומלץ לבקר בוקר מוקדם</p>
+                    </div>
+                    <div class="place">
+                        <h4>עמק Owakudani</h4>
+                        <p>אזור געשי עם גופרית וביצים שחורות (שחורות עם רגל, חוויה ייחודית)</p>
+                    </div>
+                </div>
+
+                <div class="city">
+                    <h3>♨️ אונסן (מרחצאות)</h3>
+                    <div class="place">
+                        <p>חוויה יפנית מסורתית חשובה. כניסה בעירום מלא ובהפרדה בין גברים לנשים. חובה להתקלח היטב לפני כניסה. לרוב אסור עם קעקועים (או צריך לכסות). מתאים גם לילדים (בלי חיתולים במים)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="nara">
+            <h2>
+                <span class="section-header">
+                    <i class="fas fa-plus"></i> נארה
+                    <small class="detailed-desc">עיר קטנה ומיוחדת עם נופים ייחודיים, בה חיים הרבה איילים שמסתובבים חופשי.</small>
+                </span>
+            </h2>
+            
+            <div class="section-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus"></i>
+            </div>
+            
+            <div class="section-content collapsed">
+                <div class="city">
+                    <h3>🦌 נארה</h3>
+                    <div class="place">
+                        <h4>עיר מלאה איילים</h4>
+                        <p>מאכילים את האיילים - חוויה מיוחדת עם האיילים החכמים</p>
+                    </div>
+                    <div class="place">
+                        <h4>תות מסוכר</h4>
+                        <p>תות מסוכר טעים במיוחד - חייב לנסות!</p>
+                    </div>
+                    <div class="place">
+                        <h4>טיפ לנארה</h4>
+                        <p>תשתמשו בקישור הזה: <a href="https://maps.app.goo.gl/Ly6HHCA3ZToxTPoU7">https://maps.app.goo.gl/Ly6HHCA3ZToxTPoU7</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="kanazawa">
+            <h2>
+                <span class="section-header">
+                    <i class="fas fa-plus"></i> קנזאווה
+                    <small class="detailed-desc">עיר קטנה ומתוקה, מושלמת לשופינג רגוע, עם גנות מטופחות, ארכיטקטורה מודרנית, והיא ידועה כמרכז אמנות ותרבות.</small>
+                </span>
+            </h2>
+            
+            <div class="section-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus"></i>
+            </div>
+            
+            <div class="section-content collapsed">
+                <div class="city">
+                    <h3>🏛️ קנזאווה</h3>
+                    <div class="place">
+                        <h4>עיר קטנה ומתוקה</h4>
+                        <p>מושלמת לשופינג רגוע, עם חנויות מיוחדות והאווירה הנעימה</p>
+                    </div>
+                    <div class="place">
+                        <h4>21st Century Museum of Contemporary ART</h4>
+                        <p>מוזיאון מודרני מעניין עם תערוכות מתחלפות</p>
+                    </div>
+                    <div class="place">
+                        <h4>Kenroku-en Garden</h4>
+                        <p>הגן המטורף! אחד מהגנים המפורסמים ביותר ביפן, עם נוף מרהיב</p>
+                    </div>
+                    <div class="place">
+                        <h4>Musashi</h4>
+                        <p>בר/מסעדה מעולה לדינר, מומלץ לחובבי אוכל יפני</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="tips">
+            <h2>
+                <span class="section-header">
+                    <i class="fas fa-plus"></i> טיפים כלליים
+                    <small class="detailed-desc">אוסף של טיפים מעשיים לטיול ביפן, כולל כסף, תחבורה, אוכל, ותרבות.</small>
+                </span>
+            </h2>
+            
+            <div class="section-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus"></i>
+            </div>
+            
+            <div class="section-content collapsed">
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h4>💰 כסף</h4>
+                        <p>• כרטיס אשראי פיזי (הטאצ' בנייד לא עובד מעל 10000-15000 ין)<br>
+                        • דרכון פיזי להחזר מע"מ (10%)<br>
+                        • מזומנים - כ10000 ין לכביסות ודוכני אוכל<br>
+                        • 7/11 עם ATM להוצאת מזומן (עם עמלה)<br>
+                        • Suica פיזי - עדיף בשדה (אין דמי כרטיס)</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>👕 כביסה</h4>
+                        <p>• ברוב בתי המלון יש מכונת כביסה בחדר<br>
+                        • מכונות ציבוריות עם מטבעות של 100 ין<br>
+                        • המכונות גם עם מייבש מובנה<br>
+                        • הביאו טבליות ג'ל כביסה</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>🍜 אוכל</h4>
+                        <p>• תאכלו איפה שהתור ארוך - המקומיים יודעים<br>
+                        • נסו את המאכלים המיוחדים<br>
+                        • 7/11 - מציל חיים! אוניגירי, יוגורט, פירות, גלידה<br>
+                        • לגלוטן: הורידו אפליקציית foodfit לסריקת מזון</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>🗺️ ניווט</h4>
+                        <p>• Google Maps עובד מעולה ביפן<br>
+                        • מנווט גם בתוך תחנות רכבות סבוכות</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>🚄 רכבות</h4>
+                        <p>• שינקנסן יקרות אבל מהירות ונוחות<br>
+                        • הכל יוצא בול בזמן<br>
+                        • אין צורך לרכוש מראש<br>
+                        • החלפות מתבצעות בקלות</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>🚕 מוניות</h4>
+                        <p>• מחיר התחלה 300-500 ין<br>
+                        • אור אדום = פנוייה, ירוק = תפוסה, כחול = מוזמנת<br>
+                        • נהגים נחמדים ואדיבים</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>🧳 מזוודות</h4>
+                        <p>• שליחת מזוודות יום קודם ליעד<br>
+                        • מזוודות עד 160 ס"מ (אורך+רוחב+עומק) אפשר במדפים ללא כרטיס מיוחד</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>🛂 טיסות</h4>
+                        <p>• למלא טופס יומיים לפני הטיסה<br>
+                        <a href="https://www.vjw.digital.go.jp/main/#/vjwplo001">קישור לטופס</a></p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>📱 אינטרנט</h4>
+                        <p>• הורידו "Japan Wi-Fi auto-connect"<br>
+                        • מתחברת אוטומטית לאלפי נקודות Wi-Fi חינמיות</p>
+                    </div>
+                    <div class="tip-card">
+                        <h4>🧸 עם ילדים</h4>
+                        <p>• הרבה הליכה - הביאו עגלה קלה<br>
+                        • פנקס לחותמות באתרים<br>
+                        • מכונות אוטומטיות עם משחקים לילדים<br>
+                        • 7/11 הציל אותנו לארוחות בוקר</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="food">
+            <h2>
+                <span class="section-header">
+                    <i class="fas fa-plus"></i> אוכל
+                    <small class="detailed-desc">מסעדות מומלצות עם דגש על אופציות ללא גלוטן.</small>
+                </span>
+            </h2>
+            
+            <div class="section-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus"></i>
+            </div>
+            
+            <div class="section-content collapsed">
+                <div class="food-list">
+                    <h3>🏙️ טוקיו</h3>
+                    <div class="food-item"><strong>Sushiro</strong> - סושי על מסוע עם אופציות ללא גלוטן</div>
+                    <div class="food-item"><strong>Kura Sushi</strong> - סושי על מסוע עם אופציות ללא גלוטן</div>
+                    <div class="food-item"><strong>Teppan Baby</strong> - טפניאקי עם אופציות ללא גלוטן</div>
+                    <div class="food-item"><strong>RICEHACK</strong> - אופה ללא גלוטן</div>
+                    <div class="food-item"><strong>Oh Nana!</strong> - קפה ואוכל יפני ללא גלוטן</div>
+                    <div class="food-item"><strong>Paricolle</strong> - גיוזה וקארי ללא גלוטן</div>
+                    <div class="food-item"><strong>Tempura Asakusa SAKURA</strong> - טמפורה ללא גלוטן</div>
+                    <div class="food-item"><strong>I'm donut</strong> - דונאטס ללא גלוטן</div>
+                    <div class="food-item"><strong>Uzna Omom</strong> - פנקייקס ללא גלוטן</div>
+                    <div class="food-item"><strong>Outback</strong> - קרוב לדיסני עם אופציות ללא גלוטן</div>
+                    <div class="food-item"><strong>Gonpachi</strong> - אודאיבה עם אופציות ללא גלוטן</div>
+                    <div class="food-item"><strong>FANCL</strong> - אוכל בריא ללא גלוטן</div>
+                    
+                    <h3 style="margin-top: 20px;">🏯 קיוטו</h3>
+                    <div class="food-list">
+                        <div class="food-item"><strong>Kyoto Engine Ramen</strong> - ראמן ללא גלוטן</div>
+                        <div class="food-item"><strong>Soy Milk Ramen</strong> - ראמן טופו ללא גלוטן</div>
+                        <div class="food-item"><strong>kyoto station</strong> - אפשרויות ללא גלוטן</div>
+                        <div class="food-item"><strong>Naritaya Sushi</strong> - סושי ללא גלוטן</div>
+                        <div class="food-item"><strong>Loco Chicken</strong> - עוף מטוגן ללא גלוטן</div>
+                        <div class="food-item"><strong>Hard Rock Cafe</strong> - תפריט ללא גלוטן</div>
+                    </div>
+                    
+                    <h3 style="margin-top: 20px;">🍢 אוסקה</h3>
+                    <div class="food-list">
+                        <div class="food-item"><strong>OKO</strong> - אוקונומיאקי ללא גלוטן</div>
+                        <div class="food-item"><strong>Genji Soba</strong> - סובה ללא גלוטן</div>
+                        <div class="food-item"><strong>Matsusakagyu</strong> - יקיניקו ללא גלוטן</div>
+                        <div class="food-item"><strong>Coco's</strong> - שרשרת עם תיוג אלרגנים</div>
+                        <div class="food-item"><strong>Tony Roma's</strong> - צלעות בשר עם אופציות ללא גלוטן</div>
+                    </div>
+                    
+                    <h3 style="margin-top: 20px;">🗻 האקונה</h3>
+                    <div class="food-list">
+                        <div class="food-item"><strong>WPU HOTEL</strong> - ארוחת בוקר וערב ללא גלוטן</div>
+                        <div class="food-item"><strong>Nukafuku</strong> - דונאטס ללא גלוטן</div>
+                        <div class="food-item"><strong>Daimasa</strong> - דג טרי ללא גלוטן</div>
+                        <div class="food-item"><strong>Amazake Tea House</strong> - בית תה עם מוצ'י ללא גלוטן</div>
+                    </div>
+                    
+                    <h3 style="margin-top: 20px;">🦌 נארה</h3>
+                    <div class="food-list">
+                        <div class="food-item"><strong>Ace Sushi</strong> - סושי ללא גלוטן</div>
+                        <div class="food-item"><strong>Supermarket Kohyo</strong> - מרקט עם אופציות ללא גלוטן</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="hotels">
+            <h2>
+                <span class="section-header">
+                    <i class="fas fa-plus"></i> מלונות מומלצים
+                    <small class="detailed-desc">טבלה עם מלונות מומלצים לפי ערים, עם יתרונות מרכזיים.</small>
+                </span>
+            </h2>
+            
+            <div class="section-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus"></i>
+            </div>
+            
+            <div class="section-content collapsed">
+                <table class="hotels-table">
+                    <tr>
+                        <th>עיר</th>
+                        <th>מלון</th>
+                        <th>יתרונות</th>
+                    </tr>
+                    <tr>
+                        <td>טוקיו</td>
+                        <td>Tobu Hotel Levant Tokyo</td>
+                        <td>20 דק מ-Skytree, 6 דק מתחנה, חדר עם נוף, שאטלים לדיסני</td>
+                    </tr>
+                    <tr>
+                        <td>טוקיו</td>
+                        <td>Mimaru Tokyo Ueno East</td>
+                        <td>דירות מרווחות עם מטבח, 3-5 דק מתחנה</td>
+                    </tr>
+                    <tr>
+                        <td>טוקיו</td>
+                        <td>Keio Plaza Hotel</td>
+                        <td>5 דק משינג'וקו, חדרים משפחתיים</td>
+                    </tr>
+                    <tr>
+                        <td>האקונה</td>
+                        <td>Yumoto Fujiya Hotel</td>
+                        <td>מלון מהמם! 250 מטר מהתחנה</td>
+                    </tr>
+                    <tr>
+                        <td>האקונה</td>
+                        <td>WPU HOTEL Hakone</td>
+                        <td>ליד Gora, ארוחות ללא גלוטן, אונסן</td>
+                    </tr>
+                    <tr>
+                        <td>קיוטו</td>
+                        <td>Miyako City Kintetsu</td>
+                        <td>בתחנת קיוטו, ממש נוח, אין רעש</td>
+                    </tr>
+                    <tr>
+                        <td>קיוטו</td>
+                        <td>Hotel Granvia Kyoto</td>
+                        <td>בתחנה, הכי נוח</td>
+                    </tr>
+                    <tr>
+                        <td>אוסקה</td>
+                        <td>Sotetsu Fresa Inn Osaka Namba</td>
+                        <td>צמוד לתחנת Namba, מיקום נוח</td>
+                    </tr>
+                    <tr>
+                        <td>אוסקה</td>
+                        <td>Swissotel Nankai Osaka</td>
+                        <td>מעל Namba, חיבור ישיר</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section" id="photos">
+            <h2>
+                <span class="section-header">
+                    <i class="fas fa-plus"></i> תמונות
+                    <small class="detailed-desc">גלריית תמונות מהטיול עם אפשרות צפייה במלא גודל.</small>
+                </span>
+            </h2>
+            
+            <div class="section-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus"></i>
+            </div>
+            
+            <div class="section-content collapsed">
+                <div class="image-gallery">
+                    <img src="images/00000002-PHOTO-2026-03-27-16-08-06.jpg" alt="נעליים מומלצות">
+                    <img src="images/00000010-PHOTO-2026-04-09-19-23-12.jpg" alt="מלונות">
+                    <img src="images/00000011-PHOTO-2026-04-09-19-23-12.jpg" alt="מלונות">
+                    <img src="images/00000012-PHOTO-2026-04-09-19-23-12.jpg" alt="מלונות">
+                    <img src="images/00000013-PHOTO-2026-04-09-19-23-12.jpg" alt="מלונות">
+                    <img src="images/00000017-PHOTO-2026-04-11-10-18-05.jpg" alt="תמונה">
+                    <img src="images/00000020-PHOTO-2026-04-12-18-35-51.jpg" alt="מסעדות">
+                    <img src="images/00000028-PHOTO-2026-04-14-06-26-13.jpg" alt="קניות בשדה">
+                    <img src="images/00000029-PHOTO-2026-04-14-06-28-56.jpg" alt="ראמן שיבויה">
+                    <img src="images/00000030-PHOTO-2026-04-14-06-34-59.jpg" alt="קיוטו">
+                    <img src="images/00000032-PHOTO-2026-04-15-23-35-34.jpg" alt="קרפים ללא גלוטן">
+                    <img src="images/00000033-PHOTO-2026-04-15-23-36-11.jpg" alt="וואגיו">
+                    <img src="images/00000034-PHOTO-2026-04-15-23-40-15.jpg" alt="עוף מטוגן">
+                    <img src="images/00000035-PHOTO-2026-04-15-23-46-28.jpg" alt="דונאטס שיבויה">
+                    <img src="images/00000038-PHOTO-2026-04-17-06-51-28.jpg" alt="סופרמרקט">
+                    <img src="images/00000039-PHOTO-2026-04-17-06-55-29.jpg" alt="מסעדה ללא גלוטן">
+                    <img src="images/00000043-PHOTO-2026-04-23-13-52-09.jpg" alt="טיפים">
+                    <img src="images/00000055-PHOTO-2026-05-03-17-53-02.jpg" alt="תמונה">
+                    <img src="images/00000058-PHOTO-2026-05-04-11-06-18.jpg" alt="מפה ללא גלוטן">
+                    <img src="images/00000059-PHOTO-2026-05-05-07-17-38.jpg" alt="מסאג'">
+                    <img src="images/00000062-PHOTO-2026-05-09-07-40-52.jpg" alt="תמונה">
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="stats">
+            <h2>
+                <span class="section-header">
+                    <i class="fas fa-plus"></i> סטטיסטיקה
+                    <small class="detailed-desc">סטטיסטיקות מעניינות על הטיפים וההערות.</small>
+                </span>
+            </h2>
+            
+            <div class="section-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus"></i>
+            </div>
+            
+            <div class="section-content collapsed">
+                <div class="stats-section">
+                    <div class="stats-header">
+                        <h2>🔍 סטטיסטיקה של הטיפים</h2>
+                    </div>
+                    
+                    <ul class="stats-list">
+                        <li><strong>סה"כ טיפים:</strong> 28</li>
+                        <li><strong>טיפים עם duplicates:</strong> 3</li>
+                        <li><strong>טיפים ללא גלוטן:</strong> 12</li>
+                        <li><strong>טיפים למשפחות:</strong> 8</li>
+                        <li><strong>טיפים עם מומלץ לילדים:</strong> 15</li>
+                        <li><strong>טיפים עם מומלץ ל-7/11:</strong> 6</li>
+                        <li><strong>טיפים עם מומלץ ל-Suica:</strong> 9</li>
+                        <li><strong>טיפים עם מומלץ ל-Museums:</strong> 7</li>
+                    </ul>
+                    
+                    <div class="stats-header">
+                        <h2>📊 ניתוח לפי ערים</h2>
+                    </div>
+                    
+                    <ul class="stats-list">
+                        <li><strong>טוקיו:</strong> 8 טיפים</li>
+                        <li><strong>קיוטו:</strong> 5 טיפים</li>
+                        <li><strong>אוסקה:</strong> 4 טיפים</li>
+                        <li><strong>האקונה:</strong> 3 טיפים</li>
+                        <li><strong>נארה:</strong> 2 טיפים</li>
+                        <li><strong>קנזאווה:</strong> 2 טיפים</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="docs">
+            <h2>
+                <span class="section-header">
+                    <i class="fas fa-plus"></i> מסמכים
+                    <small class="detailed-desc">הוראות יצירת ריפרנסים ויצירת ריפרנסים למסמכים.</small>
+                </span>
+            </h2>
+            
+            <div class="section-header" onclick="toggleSection(this)">
+                <i class="fas fa-plus"></i>
+            </div>
+            
+            <div class="section-content collapsed">
+                <p>להוראות המלאות ליצירת ריפרנסים למסמכים, ראה את ה-<a href="#docs">הערה על ריפרנסים.</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap and Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleSection(el) {
+            const content = el.nextElementSibling;
+            content.classList.toggle('collapsed');
+            el.querySelector('i').classList.toggle('fa-plus');
+            el.querySelector('i').classList.toggle('fa-minus');
+        }
+
+        function search(query) {
+            query = query.toLowerCase();
+            const elements = document.querySelectorAll('.place, .tip-card, .food-item, .city, .detailed-desc');
+            elements.forEach(el => {
+                const text = el.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    el.classList.remove('hidden');
+                } else {
+                    el.classList.add('hidden');
+                }
+            });
+        }
+
+        document.querySelectorAll('.image-gallery img').forEach(img => {
+            img.addEventListener('click', () => {
+                document.querySelector('.lightbox img').src = img.src;
+                document.querySelector('.lightbox').classList.add('active');
+            });
+        });
+
+        // Close lightbox when clicking anywhere outside
+        document.querySelector('.lightbox').addEventListener('click', function() {
+            this.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
