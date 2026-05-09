@@ -795,8 +795,21 @@
 
         function search(query) {
             query = query.toLowerCase();
-            const elements = document.querySelectorAll('.place-item, .tip-card, .food-item, .city-desc');
-            elements.forEach(el => {
+            if (!query) {
+                document.querySelectorAll('.place-item, .tip-card, .food-item, .city-desc').forEach(el => {
+                    el.style.display = '';
+                });
+                return;
+            }
+            // Open all city boxes when searching
+            document.querySelectorAll('.city-box').forEach(box => {
+                box.classList.add('open');
+            });
+            document.querySelectorAll('.place-item, .tip-card, .food-item').forEach(el => {
+                const text = el.textContent.toLowerCase();
+                el.style.display = text.includes(query) ? 'block' : 'none';
+            });
+            document.querySelectorAll('.city-desc').forEach(el => {
                 const text = el.textContent.toLowerCase();
                 el.style.display = text.includes(query) ? 'block' : 'none';
             });
