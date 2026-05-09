@@ -302,6 +302,7 @@
                 <li><a href="#" onclick="openCity('tips')">טיפים</a></li>
                 <li><a href="#" onclick="openCity('hotels')">מלונות</a></li>
                 <li><a href="#" onclick="openCity('stats')">סטטיסטיקה</a></li>
+                <li><a href="#" onclick="openCity('photos')">תמונות</a></li>
             </ul>
         </nav>
 
@@ -343,19 +344,19 @@
                 <div class="content-block">
                     <h3>🎢 אטרקציות</h3>
                     <div class="place-item">
-                        <h4>TeamLabs Planets</h4>
+                        <h4 style="cursor:pointer; color:#c0392b;" onclick="showContact('TeamLabs Planets')">TeamLabs Planets</h4>
                         <p>מוזיאון חווייתי מדהים! 3 חלקים: מים (הולכים יחפים!), יער וגינה. חובה לבקר.</p>
                     </div>
                     <div class="place-item">
-                        <h4>Tokyo Skytree</h4>
+                        <h4 style="cursor:pointer; color:#c0392b;" onclick="showContact('Tokyo Skytree')">Tokyo Skytree</h4>
                         <p>מגדל תצפית מרהיב. מומלץ להזמין כרטיסים מראש, במיוחד בעונת שיא.</p>
                     </div>
                     <div class="place-item">
-                        <h4>Art Aquarium Museum</h4>
+                        <h4 style="cursor:pointer; color:#c0392b;" onclick="showContact('Art Aquarium Museum')">Art Aquarium Museum</h4>
                         <p>מוזיאון אקווריומים עם דגי זהב. מרהיב ביופי, מומלץ במיוחד בערב.</p>
                     </div>
                     <div class="place-item">
-                        <h4>פארק שינג'וקו גויין</h4>
+                        <h4 style="cursor:pointer; color:#c0392b;" onclick="showContact('Shinjuku Gyoen')">פארק שינג'וקו גויין</h4>
                         <p>פארק ענק עם פריחת סאקורה. כניסה בתשלום, אפשר לשלם עם Suica.</p>
                     </div>
                     <div class="place-item">
@@ -367,7 +368,7 @@
                         <p>רובע האנימה והאלקטרוניקה. Bic Camera - חנות אלקטרוניקה ענקית.</p>
                     </div>
                     <div class="place-item">
-                        <h4>אודאיבה</h4>
+                        <h4 style="cursor:pointer; color:#c0392b;" onclick="showContact('Odaiba')">אודאיבה</h4>
                         <p>פסל יוניקורן גנדם ענק, ריינבו ברידג', בניין Fuji TV.</p>
                     </div>
                 </div>
@@ -375,14 +376,19 @@
                 <div class="content-block">
                     <h3>🍽️ מסעדות (ללא גלוטן)</h3>
                     <div class="food-grid">
-                        <div class="food-item"><strong>Sushiro</strong><span>סושי על מסוע</span></div>
-                        <div class="food-item"><strong>Kura Sushi</strong><span>סושי על מסוע</span></div>
-                        <div class="food-item"><strong>Teppan Baby</strong><span>טפניאקי</span></div>
-                        <div class="food-item"><strong>RICEHACK</strong><span>אופה GF</span></div>
-                        <div class="food-item"><strong>Oh Nana!</strong><span>קפה יפני</span></div>
-                        <div class="food-item"><strong>Paricolle</strong><span>גיוזה וקארי</span></div>
-                        <div class="food-item"><strong>I'm donut</strong><span>דונאטס</span></div>
-                        <div class="food-item"><strong>Outback</strong><span>קרוב לדיסני</span></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Sushiro BIGBOX')">Sushiro BIGBOX</strong><span>סושי מסוע</span><br><small style="cursor:pointer;" onclick="showContact('Sushiro BIGBOX')">📍 Takadanobaba, Shinjuku</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Teppan Baby')">Teppan Baby</strong><span>טפניאקי</span><br><small style="cursor:pointer;" onclick="showContact('Teppan Baby')">📍 Kabukicho, Shinjuku</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Totti Candy')">Totti Candy</strong><span>צמר גפן</span><br><small style="cursor:pointer;" onclick="showContact('Totti Candy')">📍 Jingumae, Harajuku</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Uzna Omom')">Uzna Omom</strong><span>פנקייקס GF</span><br><small style="cursor:pointer;" onclick="showContact('Uzna Omom')">📍 Jingumae, Shibuya</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('I&apos;m donut')">I'm donut</strong><span>דונאטס GF</span><br><small style="cursor:pointer;" onclick="showContact('I&apos;m donut')">📍 Dogenzaka, Shibuya</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Kura Sushi')">Kura Sushi</strong><span>סושי מסוע</span><br><small style="cursor:pointer;" onclick="showContact('Kura Sushi')">📍 Dogenzaka, Shibuya</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Outback')">Outback</strong><span>סטייקים</span><br><small style="cursor:pointer;" onclick="showContact('Outback')">📍 Maihama (ליד דיסני)</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Tempura SAKURA')">Tempura SAKURA</strong><span>טמפורה GF</span><br><small style="cursor:pointer;" onclick="showContact('Tempura SAKURA')">📍 Kaminarimon, Asakusa</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('FANCL')">FANCL</strong><span>אוכל בריא</span><br><small style="cursor:pointer;" onclick="showContact('FANCL')">📍 Ginza, Chuo</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Gonpachi')">Gonpachi</strong><span>ראמן</span><br><small style="cursor:pointer;" onclick="showContact('Gonpachi')">📍 Daiba, Odaiba</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Paricolle')">Paricolle</strong><span>גיוזה GF</span><br><small style="cursor:pointer;" onclick="showContact('Paricolle')">📍 Kabukicho, Shinjuku</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Oh Nana!')">Oh Nana!</strong><span>קפה יפני GF</span><br><small style="cursor:pointer;" onclick="showContact('Oh Nana!')">📍 Kanda, Chiyoda</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('RICEHACK')">RICEHACK</strong><span>אופה GF</span><br><small style="cursor:pointer;" onclick="showContact('RICEHACK')">📍 Jingumae, Harajuku</small></div>
                     </div>
                 </div>
 
@@ -413,19 +419,19 @@
                 <div class="content-block">
                     <h4>🛒 אאוטלטים מומלצים</h4>
                     <div class="place-item">
-                        <h4>Gotemba Premium Outlets</h4>
+                        <h4 style="cursor:pointer; color:#c0392b;" onclick="showContact('Gotemba Premium Outlets')">Gotemba Premium Outlets</h4>
                         <p>הגדול ביפן! 290 חנויות, נוף להר פוג'י</p>
                     </div>
                     <div class="place-item">
-                        <h4>Shisui Premium Outlets</h4>
+                        <h4 style="cursor:pointer; color:#c0392b;" onclick="showContact('Shisui Premium Outlets')">Shisui Premium Outlets</h4>
                         <p>15 דק מנריטה, מושלם ליום האחרון</p>
                     </div>
                     <div class="place-item">
-                        <h4>Mitsui Kisarazu</h4>
+                        <h4 style="cursor:pointer; color:#c0392b;" onclick="showContact('Mitsui Kisarazu')">Mitsui Kisarazu</h4>
                         <p>הקניון הגדול ביפן - 330 חנויות, חנות דיסני</p>
                     </div>
                     <div class="place-item">
-                        <h4>Karuizawa</h4>
+                        <h4 style="cursor:pointer; color:#c0392b;" onclick="showContact('Karuizawa')">Karuizawa</h4>
                         <p>60 דק מטוקיו בשינקנסן, יוקרה</p>
                     </div>
                 </div>
@@ -494,7 +500,7 @@
                         <p>מומלץ לחובבי היסטוריה</p>
                     </div>
                     <div class="place-item">
-                        <h4>יער הבמבוקים (Arashiyama)</h4>
+                        <h4 style="cursor:pointer; color:#c0392b;" onclick="showContact('Arashiyama')">יער הבמבוקים (Arashiyama)</h4>
                         <p>יער מדהים עם שבילים ייחודיים</p>
                     </div>
                     <div class="place-item">
@@ -504,12 +510,12 @@
                 </div>
 
                 <div class="content-block">
-                    <h3>🍽️ מסעדות (ללא גלוטן)</h3>
+<h3>🍽️ מסעדות (ללא גלוטן)</h3>
                     <div class="food-grid">
-                        <div class="food-item"><strong>Kyoto Engine Ramen</strong><span>ראמן GF</span></div>
-                        <div class="food-item"><strong>Soy Milk Ramen</strong><span>ראמן טופו</span></div>
-                        <div class="food-item"><strong>K112</strong><span>עלי יקר</span></div>
-                        <div class="food-item"><strong>Hard Rock Cafe</strong><span>תפריט GF</span></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Kyoto Engine Ramen')">Kyoto Engine Ramen</strong><span>ראמן GF</span><br><small style="cursor:pointer;" onclick="showContact('Kyoto Engine Ramen')">📍 Nakanocho, Nakagyo</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('K112')">K112</strong><span>עלי יקר</span><br><small style="cursor:pointer;" onclick="showContact('K112')">📍 Tokiwacho, Higashiyama</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Loco Chicken')">Loco Chicken</strong><span>עוף מטוגן</span><br><small style="cursor:pointer;" onclick="showContact('Loco Chicken')">📍 מספר סניפים בקיוטו</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Naritaya Sushi')">Naritaya Sushi</strong><span>סושי</span><br><small style="cursor:pointer;" onclick="showContact('Naritaya Sushi')">📍 Arashiyama</small></div>
                     </div>
                 </div>
             </div>
@@ -549,10 +555,9 @@
                 <div class="content-block">
                     <h3>🍽️ מסעדות (ללא גלוטן)</h3>
                     <div class="food-grid">
-                        <div class="food-item"><strong>OKO</strong><span>אוקונומיאקי</span></div>
-                        <div class="food-item"><strong>Genji Soba</strong><span>סובה</span></div>
-                        <div class="food-item"><strong>Matsusakagyu</strong><span>יקיניקו</span></div>
-                        <div class="food-item"><strong>Tony Roma's</strong><span>צלעות בשר</span></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('OKO')">OKO</strong><span>אוקונומיאקי</span><br><small style="cursor:pointer;" onclick="showContact('OKO')">📍 Dotonbori</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Matsusakagyu')">Matsusakagyu</strong><span>יקיניקו</span><br><small style="cursor:pointer;" onclick="showContact('Matsusakagyu')">📍 Namba</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Genji Soba')">Genji Soba</strong><span>סובה</span><br><small style="cursor:pointer;" onclick="showContact('Genji Soba')">📍 אוסקה</small></div>
                     </div>
                 </div>
             </div>
@@ -596,10 +601,10 @@
                 <div class="content-block">
                     <h3>🍽️ מסעדות</h3>
                     <div class="food-grid">
-                        <div class="food-item"><strong>WPU HOTEL</strong><span>ארוחות GF</span></div>
-                        <div class="food-item"><strong>Nukafuku</strong><span>דונאטס GF</span></div>
-                        <div class="food-item"><strong>Daimasa</strong><span>דג טרי</span></div>
-                        <div class="food-item"><strong>Amazake Tea House</strong><span>מוצ'י ותה</span></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('WPU HOTEL')">WPU HOTEL</strong><span>ארוחות GF</span><br><small style="cursor:pointer;" onclick="showContact('WPU HOTEL')">📍 Gora, Hakone</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Daimasa')">Daimasa</strong><span>דג טרי</span><br><small style="cursor:pointer;" onclick="showContact('Daimasa')">📍 Moto-Hakone</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Amazake Tea House')">Amazake Tea House</strong><span>מוצ'י ותה</span><br><small style="cursor:pointer;" onclick="showContact('Amazake Tea House')">📍 Hakone</small></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Nukafuku')">Nukafuku</strong><span>דונאטס GF</span><br><small style="cursor:pointer;" onclick="showContact('Nukafuku')">📍 Gora (שעות מוגבלות)</small></div>
                     </div>
                 </div>
 
@@ -640,8 +645,7 @@
                 <div class="content-block">
                     <h3>🍽️ מסעדות</h3>
                     <div class="food-grid">
-                        <div class="food-item"><strong>Ace Sushi</strong><span>סושי</span></div>
-                        <div class="food-item"><strong>Supermarket Kohyo</strong><span>מרקט ליד תחנה</span></div>
+                        <div class="food-item"><strong style="cursor:pointer; color:#c0392b;" onclick="showContact('Ace Sushi')">Ace Sushi</strong><span>סושי</span><br><small style="cursor:pointer;" onclick="showContact('Ace Sushi')">📍 Higashimuki, Nara</small></div>
                     </div>
                 </div>
             </div>
@@ -661,11 +665,11 @@
                 <div class="content-block">
                     <h3>🏛️ אטרקציות</h3>
                     <div class="place-item">
-                        <h4>21st Century Museum</h4>
+                        <h4 style="cursor:pointer; color:#c0392b;" onclick="showContact('21st Century Museum')">21st Century Museum</h4>
                         <p>מוזיאון מודרני מעניין</p>
                     </div>
                     <div class="place-item">
-                        <h4>Kenroku-en Garden</h4>
+                        <h4 style="cursor:pointer; color:#c0392b;" onclick="showContact('Kenroku-en Garden')">Kenroku-en Garden</h4>
                         <p>הגן המטורף! אחד היפים ביפן</p>
                     </div>
                     <div class="place-item">
@@ -750,11 +754,11 @@
             <div class="city-content">
                 <table class="hotels-table">
                     <tr><th>עיר</th><th>מלון</th><th>יתרון</th></tr>
-                    <tr><td>טוקיו</td><td>Tobu Hotel Levant</td><td>20 דק מ-Skytree, שאטלים לדיסני</td></tr>
-                    <tr><td>טוקיו</td><td>Mimaru Ueno</td><td>דירות עם מטבח</td></tr>
-                    <tr><td>האקונה</td><td>Yumoto Fujiya</td><td>250 מטר מהתחנה</td></tr>
-                    <tr><td>קיוטו</td><td>Miyako City Kintetsu</td><td>בתחנה, אין רעש</td></tr>
-                    <tr><td>אוסקה</td><td>Sotetsu Fresa Namba</td><td>צמוד לתחנה</td></tr>
+                    <tr><td>טוקיו</td><td style="cursor:pointer; color:#c0392b;" onclick="showContact('Tobu Hotel Levant')">Tobu Hotel Levant</td><td>20 דק מ-Skytree, שאטלים לדיסני</td></tr>
+                    <tr><td>טוקיו</td><td style="cursor:pointer; color:#c0392b;" onclick="showContact('Mimaru Ueno')">Mimaru Ueno</td><td>דירות עם מטבח</td></tr>
+                    <tr><td>האקונה</td><td style="cursor:pointer; color:#c0392b;" onclick="showContact('Yumoto Fujiya')">Yumoto Fujiya</td><td>250 מטר מהתחנה</td></tr>
+                    <tr><td>קיוטו</td><td style="cursor:pointer; color:#c0392b;" onclick="showContact('Miyako City Kintetsu')">Miyako City Kintetsu</td><td>בתחנה, אין רעש</td></tr>
+                    <tr><td>אוסקה</td><td style="cursor:pointer; color:#c0392b;" onclick="showContact('Sotetsu Fresa Namba')">Sotetsu Fresa Namba</td><td>צמוד לתחנה</td></tr>
                 </table>
             </div>
         </div>
@@ -779,9 +783,202 @@
                 </div>
             </div>
         </div>
+
+        <!-- תמונות -->
+        <div class="city-box" id="photos">
+            <div class="city-header" onclick="toggleCity('photos')">
+                <h2><i class="fas fa-images"></i> צילומי מסך מרשתות</h2>
+                <i class="fas fa-chevron-down icon"></i>
+            </div>
+            <div class="city-content">
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px;">
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000002-PHOTO-2026-03-27-16-08-06.jpg" alt="נעליים מומלצות" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        <span style="position:absolute; top:5px; right:5px; background:#27ae60; color:white; padding:2px 6px; border-radius:4px; font-size:10px;">✓</span>
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000010-PHOTO-2026-04-09-19-23-12.jpg" alt="מלונות" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        <span style="position:absolute; top:5px; right:5px; background:#27ae60; color:white; padding:2px 6px; border-radius:4px; font-size:10px;">✓</span>
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000011-PHOTO-2026-04-09-19-23-12.jpg" alt="מלונות" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        <span style="position:absolute; top:5px; right:5px; background:#27ae60; color:white; padding:2px 6px; border-radius:4px; font-size:10px;">✓</span>
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000012-PHOTO-2026-04-09-19-23-12.jpg" alt="מלונות" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        <span style="position:absolute; top:5px; right:5px; background:#27ae60; color:white; padding:2px 6px; border-radius:4px; font-size:10px;">✓</span>
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000013-PHOTO-2026-04-09-19-23-12.jpg" alt="מלונות" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        <span style="position:absolute; top:5px; right:5px; background:#27ae60; color:white; padding:2px 6px; border-radius:4px; font-size:10px;">✓</span>
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000029-PHOTO-2026-04-14-06-28-56.jpg" alt="ראמן שיבויה" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        <span style="position:absolute; top:5px; right:5px; background:#27ae60; color:white; padding:2px 6px; border-radius:4px; font-size:10px;">✓</span>
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000030-PHOTO-2026-04-14-06-34-59.jpg" alt="קיוטו" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        <span style="position:absolute; top:5px; right:5px; background:#27ae60; color:white; padding:2px 6px; border-radius:4px; font-size:10px;">✓</span>
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000032-PHOTO-2026-04-15-23-35-34.jpg" alt="קרפים ללא גלוטן" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        <span style="position:absolute; top:5px; right:5px; background:#27ae60; color:white; padding:2px 6px; border-radius:4px; font-size:10px;">✓</span>
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000033-PHOTO-2026-04-15-23-36-11.jpg" alt="וואגיו" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        <span style="position:absolute; top:5px; right:5px; background:#27ae60; color:white; padding:2px 6px; border-radius:4px; font-size:10px;">✓</span>
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000034-PHOTO-2026-04-15-23-40-15.jpg" alt="עוף מטוגן" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        <span style="position:absolute; top:5px; right:5px; background:#27ae60; color:white; padding:2px 6px; border-radius:4px; font-size:10px;">✓</span>
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000035-PHOTO-2026-04-15-23-46-28.jpg" alt="דונאטס שיבויה" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        <span style="position:absolute; top:5px; right:5px; background:#27ae60; color:white; padding:2px 6px; border-radius:4px; font-size:10px;">✓</span>
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000038-PHOTO-2026-04-17-06-51-28.jpg" alt="סופרמרקט" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        <span style="position:absolute; top:5px; right:5px; background:#27ae60; color:white; padding:2px 6px; border-radius:4px; font-size:10px;">✓</span>
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000039-PHOTO-2026-04-17-06-55-29.jpg" alt="מסעדה ללא גלוטן" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        <span style="position:absolute; top:5px; right:5px; background:#27ae60; color:white; padding:2px 6px; border-radius:4px; font-size:10px;">✓</span>
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000058-PHOTO-2026-05-04-11-06-18.jpg" alt="מפה ללא גלוטן" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        <span style="position:absolute; top:5px; right:5px; background:#27ae60; color:white; padding:2px 6px; border-radius:4px; font-size:10px;">✓</span>
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000059-PHOTO-2026-05-05-07-17-38.jpg" alt="מסאג'" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                        <span style="position:absolute; top:5px; right:5px; background:#27ae60; color:white; padding:2px 6px; border-radius:4px; font-size:10px;">✓</span>
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000017-PHOTO-2026-04-11-10-18-05.jpg" alt="תמונה" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000020-PHOTO-2026-04-12-18-35-51.jpg" alt="תמונה" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000021-PHOTO-2026-04-12-18-35-51.jpg" alt="תמונה" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000022-PHOTO-2026-04-12-18-35-51.jpg" alt="תמונה" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000023-PHOTO-2026-04-12-18-35-51.jpg" alt="תמונה" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000024-PHOTO-2026-04-12-18-35-51.jpg" alt="תמונה" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000025-PHOTO-2026-04-12-18-35-51.jpg" alt="תמונה" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000026-PHOTO-2026-04-12-18-35-51.jpg" alt="תמונה" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000027-PHOTO-2026-04-12-18-35-51.jpg" alt="תמונה" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000028-PHOTO-2026-04-14-06-26-13.jpg" alt="תמונה" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000043-PHOTO-2026-04-23-13-52-09.jpg" alt="תמונה" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000055-PHOTO-2026-05-03-17-53-02.jpg" alt="תמונה" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                    </div>
+                    <div class="photo-item" style="position:relative;">
+                        <img src="images/00000062-PHOTO-2026-05-09-07-40-52.jpg" alt="תמונה" style="width:100%; border-radius:8px; cursor:pointer;" onclick="openLightbox(this.src)">
+                    </div>
+                </div>
+                <div class="city-desc" style="margin-top:15px;">
+                    <p><strong>💡 טיפים מהתמונות:</strong></p>
+                    <ul>
+                        <li>נעליים - שווה לקנות ביפן (Onitsuka Tiger מומלץ)</li>
+                        <li>קניות בשדה - בשדה תעופה ובתחנות רכבת יש הרבה חנויות</li>
+                        <li>סופרמרקט - יש מוצרים ללא גלוטן ברוב הסופרים</li>
+                        <li>מסאג' - יש בכל מקום, מומלץ אחרי יום הליכות</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:1000; justify-content:center; align-items:center;" onclick="closeLightbox()">
+        <img id="lightbox-img" style="max-width:90%; max-height:90%; border-radius:10px;">
+    </div>
+
+    <div id="contact-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:2000; justify-content:center; align-items:center;">
+        <div style="background:white; padding:25px; border-radius:15px; max-width:400px; width:90%;">
+            <h3 id="contact-name" style="color:#c0392b; margin-bottom:15px;"></h3>
+            <p id="contact-address" style="margin-bottom:10px;"></p>
+            <p id="contact-website" style="margin-bottom:10px;"></p>
+            <p id="contact-phone" style="margin-bottom:10px;"></p>
+            <button onclick="closeContact()" style="background:#c0392b; color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer;">סגור</button>
+        </div>
     </div>
 
     <script>
+        const contacts = {
+            "Sushiro BIGBOX": { address: "2 Chome-19-1 Takadanobaba, Shinjuku City, Tokyo 169-0075", website: "https://www.sushiro.co.jp", phone: "" },
+            "Teppan Baby": { address: "1 Chome-17-10 Kabukicho, Shinjuku City, Tokyo 160-0021", website: "", phone: "" },
+            "Totti Candy": { address: "1 Chome-16-5 Jingumae, Shibuya City, Tokyo 150-0001", website: "", phone: "" },
+            "Uzna Omom": { address: "5 Chome-17-8 Jingumae, Shibuya City, Tokyo 150-0001", website: "", phone: "" },
+            "I'm donut": { address: "1 Chome-2-3 Dogenzaka, Shibuya City, Tokyo 150-0043", website: "", phone: "" },
+            "Kura Sushi": { address: "1 Chome-2-3 Dogenzaka, Shibuya City, Tokyo 150-0043", website: "https://www.kurasushi.co.jp", phone: "" },
+            "Outback": { address: "1 Chome-1-1 Maihama, Urayasu, Chiba 279-0031", website: "https://www.outback.co.jp", phone: "" },
+            "Tempura SAKURA": { address: "2 Chome-15-1 Kaminarimon, Taito City, Tokyo 111-0034", website: "", phone: "" },
+            "FANCL": { address: "5 Chome-8-16 Ginza, Chuo City, Tokyo 104-0061", website: "https://www.fancl.co.jp", phone: "" },
+            "Gonpachi": { address: "1 Chome-7-1 Daiba, Minato City, Tokyo 135-0091", website: "https://gonpachi.jp", phone: "" },
+            "Paricolle": { address: "Kabukicho, Shinjuku, Tokyo 160-0021", website: "", phone: "" },
+            "Oh Nana!": { address: "11 Kanda Kitanorimonocho, Chiyoda City, Tokyo 101-0036", website: "", phone: "" },
+            "RICEHACK": { address: "5 Chome-16-5 Jingumae, Shibuya, Tokyo 150-0001", website: "", phone: "" },
+            "Kyoto Engine Ramen": { address: "548-1 Nakanocho, Nakagyo Ward, Kyoto 604-8042", website: "", phone: "" },
+            "K112": { address: "112 Tokiwacho, Higashiyama Ward, Kyoto 605-0079", website: "", phone: "" },
+            "Loco Chicken": { address: "Kyoto (multiple locations)", website: "https://www.locochicken.jp", phone: "" },
+            "Naritaya Sushi": { address: "20-5 Sagatenryuji Susukinobabacho, Ukyo Ward, Kyoto 616-8385", website: "", phone: "" },
+            "OKO": { address: "2 Chome-4-13 Dotonbori, Chuo Ward, Osaka 542-0071", website: "", phone: "" },
+            "Matsusakagyu": { address: "3-11 Namba Sennichimae, Chuo Ward, Osaka 542-0075", website: "https://www.matsusaka.co.jp", phone: "" },
+            "Genji Soba": { address: "Osaka", website: "", phone: "" },
+            "Ace Sushi": { address: "28 Higashimuki Nakamachi, Nara 630-8215", website: "", phone: "" },
+            "WPU HOTEL": { address: "1320-179 Gora, Hakone, Kanagawa 250-0408", website: "https://www.wpuby.co.jp", phone: "" },
+            "Daimasa": { address: "63 Moto-Hakone, Hakone, Kanagawa 250-0522", website: "", phone: "" },
+            "Amazake Tea House": { address: "395-1 Hakone, Kanagawa 250-0521", website: "", phone: "" },
+            "Nukafuku": { address: "Gora, Hakone, Kanagawa 250-0408", website: "", phone: "" },
+            "Tobu Hotel Levant": { address: "1-2-3 Kinshi, Sumida City, Tokyo 130-0013", website: "https://www.tobuhotel.co.jp/levant", phone: "" },
+            "Mimaru Ueno": { address: "3-5-2 Ueno, Taito City, Tokyo 110-0005", website: "https://www.mimaruhotels.com/ueno", phone: "" },
+            "Yumoto Fujiya": { address: "199 Yumoto, Hakone, Kanagawa 250-0311", website: "https://www.fujiya.co.jp", phone: "" },
+            "Miyako City Kintetsu": { address: "Kintetsu Kyoto Station, Kyoto 600-8216", website: "https://www.miyakohotels.co.jp/miyako-city", phone: "" },
+            "Sotetsu Fresa Namba": { address: "4-2-15 Namba, Chuo Ward, Osaka 542-0076", website: "https://sotetsu-hotels.com/fresa/osaka-namba", phone: "" },
+            "TeamLabs Planets": { address: "Odaiba, Tokyo,Palette Town", website: "https://planets.teamlab.art", phone: "" },
+            "Tokyo Skytree": { address: "1 Chome-1-2 Oshiage, Sumida City, Tokyo 131-8634", website: "https://www.tokyo-skytree.jp", phone: "" },
+            "Art Aquarium Museum": { address: "1-1-1 Nihombashi, Chuo City, Tokyo 103-0027", website: "https://artaquarium.jp", phone: "" },
+            "Shinjuku Gyoen": { address: "11 Naitomachi, Shinjuku City, Tokyo 160-0014", website: "https://www.env.go.jp/garden/shinjukugyoen", phone: "" },
+            "Odaiba": { address: "Daiba, Minato City, Tokyo", website: "", phone: "" },
+            "Gotemba Premium Outlets": { address: "2-1-1 Gotemba, Shizuoka 412-0023", website: "https://www.premiumoutlets.co.jp/en/gotemba", phone: "" },
+            "Shisui Premium Outlets": { address: "2-4-1 Shisui, Chiba 285-0912", website: "https://www.premiumoutlets.co.jp/en/shisui", phone: "" },
+            "Mitsui Kisarazu": { address: "Kisarazu, Chiba", website: "https://mitsui-shopping-park.com/mitsaikisarazu", phone: "" },
+            "Karuizawa": { address: "Karuizawa, Nagano", website: "", phone: "" },
+            "Okochi Sanso Garden": { address: "Okochicho, Kobe, Hyogo", website: "", phone: "" },
+            "Arashiyama": { address: "Arashiyama, Kyoto", website: "", phone: "" },
+            "21st Century Museum": { address: "1-2-1 Hirosaka, Kanazawa, Ishikawa 920-0003", website: "https://www.kanazawa21.jp", phone: "" },
+            "Kenroku-en Garden": { address: "Kenrokuencho, Kanazawa, Ishikawa", website: "https://www.pref.ishikawa.jp.jp/kanazawa/kenrokuen", phone: "" }
+        };
+
+        function showContact(name) {
+            const c = contacts[name] || { address: "", website: "", phone: "" };
+            document.getElementById('contact-name').textContent = name;
+            document.getElementById('contact-address').innerHTML = c.address ? "📍 " + c.address : "";
+            document.getElementById('contact-website').innerHTML = c.website ? "🌐 <a href='" + c.website + "' target='_blank'>" + c.website + "</a>" : "";
+            document.getElementById('contact-phone').innerHTML = c.phone ? "📞 " + c.phone : "";
+            document.getElementById('contact-modal').style.display = 'flex';
+        }
+
+        function closeContact() {
+            document.getElementById('contact-modal').style.display = 'none';
+        }
+
         function toggleCity(id) {
             const box = document.getElementById(id);
             box.classList.toggle('open');
@@ -793,25 +990,53 @@
             box.scrollIntoView({ behavior: 'smooth' });
         }
 
-        function search(query) {
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        function openCity(id) {
+            const box = document.getElementById(id);
+            box.classList.add('open');
+            box.scrollIntoView({ behavior: 'smooth' });
+        }
+
+function search(query) {
             query = query.toLowerCase();
+            // Close all boxes first
+            document.querySelectorAll('.city-box').forEach(box => {
+                box.classList.remove('open');
+            });
             if (!query) {
                 document.querySelectorAll('.place-item, .tip-card, .food-item, .city-desc').forEach(el => {
                     el.style.display = '';
                 });
                 return;
             }
-            // Open all city boxes when searching
-            document.querySelectorAll('.city-box').forEach(box => {
-                box.classList.add('open');
-            });
+            // Find matching items and open their parent boxes
             document.querySelectorAll('.place-item, .tip-card, .food-item').forEach(el => {
                 const text = el.textContent.toLowerCase();
-                el.style.display = text.includes(query) ? 'block' : 'none';
+                const isMatch = text.includes(query);
+                el.style.display = isMatch ? 'block' : 'none';
+                if (isMatch) {
+                    el.closest('.city-box').classList.add('open');
+                }
             });
             document.querySelectorAll('.city-desc').forEach(el => {
                 const text = el.textContent.toLowerCase();
-                el.style.display = text.includes(query) ? 'block' : 'none';
+                const isMatch = text.includes(query);
+                el.style.display = isMatch ? 'block' : 'none';
+                if (isMatch) {
+                    el.closest('.city-box').classList.add('open');
+                }
             });
         }
     </script>
